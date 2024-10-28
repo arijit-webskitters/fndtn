@@ -71,7 +71,7 @@ function dropMatter(matterContainer, circleClass) {
                             frictionAir: 0.00001,
                             restitution: 0.4,
                             // velocity: { x: 0, y: 0 },
-                            angle: Math.random() * Math.PI,
+                            angle: gsap.utils.random(-26, 26, 6) * Math.PI,
                             label: "circle",
                             render: {
                                 // fill: "red",
