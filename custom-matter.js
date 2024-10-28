@@ -54,7 +54,7 @@ function dropMatter(matterContainer, circleClass) {
             const cr_paths = matterContainer.querySelectorAll(circleClass);
             if (cr_paths.length) {
                 cr_paths.forEach((e, i) => {
-                    let circleDiameter = size.w * SVG_CIRCLE_WIDTH;
+                    let circleDiameter = size.w * SVG_CIRCLE_WIDTH * 0.03;
                     let scaleSize = circleDiameter / e.width;
                     let scale = Math.min(scaleSize, scaleSize);
                     let circle = Bodies.circle(
@@ -75,8 +75,8 @@ function dropMatter(matterContainer, circleClass) {
                                 sprite: {
                                     imgSize: e.width,
                                     texture: e.src,
-                                    // xScale: scale,
-                                    // yScale: scale,
+                                    xScale: scale,
+                                    yScale: scale,
 
                                 }
                             }
