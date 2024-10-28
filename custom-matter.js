@@ -11,7 +11,7 @@ function dropMatter(matterContainer, circleClass) {
             Vector = Matter.Vector,
             Vertices = Matter.Vertices;
 
-        const SVG_CIRCLE_WIDTH = 0.15;
+        const SVG_CIRCLE_WIDTH = 0.03;
         var size = { w: matterContainer.clientWidth, h: matterContainer.clientHeight, offset: 100 };
 
         // create an engine
