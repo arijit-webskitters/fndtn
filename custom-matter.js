@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const matterContainer = document.querySelector(".brand-drop-box");
+    const matterContainer = document.getElementById("brand-drop-box");
     if (matterContainer != undefined) {
         // module aliases
         var Engine = Matter.Engine,
