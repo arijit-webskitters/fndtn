@@ -11,7 +11,7 @@ function dropMatter(matterContainer, circleClass) {
             Vector = Matter.Vector,
             Vertices = Matter.Vertices;
 
-        const SVG_CIRCLE_WIDTH = 0.15;
+        const SVG_CIRCLE_WIDTH = 0.12;
         var size = { w: matterContainer.clientWidth, h: matterContainer.clientHeight, offset: 100 };
 
         // create an engine
@@ -54,7 +54,7 @@ function dropMatter(matterContainer, circleClass) {
             const cr_paths = matterContainer.querySelectorAll(circleClass);
             if (cr_paths.length) {
                 cr_paths.forEach((e, i) => {
-                    let circleDiameter = size.w * SVG_CIRCLE_WIDTH * 0.2;
+                    let circleDiameter = size.w * SVG_CIRCLE_WIDTH;
                     let scaleSize = circleDiameter / e.width;
                     let scale = Math.min(scaleSize, scaleSize);
                     let circle = Bodies.circle(
