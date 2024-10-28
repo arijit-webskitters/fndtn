@@ -45,19 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // add all of the bodies to the world
         Composite.add(engine.world, [ground, leftWall, rightWall, ceiling]);
 
-        //add mouse
-        let mouse = Matter.Mouse.create(render.canvas);
-        let mouseConstraint = Matter.MouseConstraint.create(engine, {
-            mouse: mouse,
-            constraint: {
-                stiffness: 0.2,
-                render: { visible: false }
-            }
-        });
-        Composite.add(engine.world, mouseConstraint);
-        mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
-        mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
-
         //render
         Render.run(render);
         var runner = Runner.create();
@@ -65,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //create shape
         function createshapes() {
-            const cr_paths = matterContainer.querySelectorAll(".brand-circle");
+            const cr_paths = matterContainer.querySelectorAll(".brand-circle-img");
             if (cr_paths.length) {
                 cr_paths.forEach((e, i) => {
                     let circleDiameter = size.w * SVG_CIRCLE_WIDTH;
@@ -82,12 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
                             angle: Math.random() * Math.PI,
                             label: "circle",
                             render: {
-                                fill: "red",
+                                // fill: "red",
+                                fillStyle: 'transparent',
+                                strokeStyle: '#000',
+                                lineWidth: 1,
                                 sprite: {
                                     imgSize: e.width,
                                     texture: e.src,
                                     xScale: scale,
                                     yScale: scale,
+
                                 }
                             }
                         }
@@ -137,4 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("resize", () => handleResize(matterContainer));
     }
 });
+
+
+
 
