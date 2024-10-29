@@ -150,7 +150,7 @@ function innerBannerAnim(isDekstop, loco_scroll, page_container) {
         gsap.set(bannerBtmPara, { opacity: 0 })
         setTimeout(() => {
             bannerTextAnim(innerBanner)
-        }, 200);
+        }, 800);
 
         innerBannerTl.set([bannerLeftCircle, bannerImgCircle, bannerRightCircle], { opacity: 1, })
             .to([bannerLeftCircle, bannerImgCircle, bannerRightCircle], { x: "0vw", duration: 1.2, ease: "power3.out", })
