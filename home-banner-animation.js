@@ -130,3 +130,38 @@ function homeBannerAnim(isDekstop, loco_scroll, page_container) {
     }
 
 }
+
+
+function innerBannerAnim(isDekstop, loco_scroll, page_container) {
+
+    let innerBanner = document.getElementById('inner-banner');
+    if (innerBanner != undefined) {
+        let bannerLeftCircle = innerBanner.querySelector('.innr-bnnr-lft-crcl'),
+            bannerRightCircle = innerBanner.querySelector('.innr-bnnr-rht-crcl'),
+            bannerImgCircle = innerBanner.querySelector('.inner-banner-img-wpr'),
+            bannerBtmPara = innerBanner.querySelector('.inner-banner-btm-para');
+
+        let innerBannerTl = gsap.timeline();
+        let innerBannerScrollTl = gsap.timeline();
+
+        gsap.set(bannerLeftCircle, { x: "-30vw", })
+        gsap.set(bannerImgCircle, { x: "-60vw" })
+        gsap.set(bannerRightCircle, { x: "-140vw" })
+        gsap.set(bannerBtmPara, { opacity: 0 })
+        setTimeout(() => {
+            bannerTextAnim(innerBanner)
+        }, 200);
+
+        innerBannerTl.set([bannerLeftCircle, bannerImgCircle, bannerRightCircle], { opacity: 1, })
+            .to([bannerLeftCircle, bannerImgCircle, bannerRightCircle], { x: "0vw", duration: 1.2, ease: "power3.out", })
+            .to([bannerBtmPara], { opacity: 1, duration: 0.5, delay: 0.8, ease: "none", })
+            .eventCallback("onComplete", () => {
+                // alert('complete')
+                if (isDekstop) {
+                    loco_scroll.start();
+                }
+            });
+
+    }
+
+}
