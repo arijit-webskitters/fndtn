@@ -1,7 +1,7 @@
 function bannerTextAnim(bannerSec) {
     let bannerAnimText = bannerSec.querySelector('[data-title-banner]')
     
-    function bannerTextAnimFunction(bannerSec) {
+    // function bannerTextAnimFunction(bannerSec) {
         if (bannerAnimText != undefined) {
             bannerSec.querySelectorAll("[data-title-banner]").forEach((el) => {
                 let tr = el,
@@ -50,7 +50,7 @@ function bannerTextAnim(bannerSec) {
                     });
             });
         }
-    }    
+    // }    
 }
 
 function homeBannerAnim(isDekstop, loco_scroll, page_container) {
