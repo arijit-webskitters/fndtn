@@ -53,7 +53,7 @@ function bannerTextAnim(bannerSec) {
     }    
 }
 
-function homeBannerAnim(isDekstop, loco_scroll) {
+function homeBannerAnim(isDekstop, loco_scroll, page_container) {
 
     let homeBanner = document.getElementById('home-banner');
     if (homeBanner != undefined) {
