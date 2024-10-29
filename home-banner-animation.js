@@ -53,7 +53,7 @@ function bannerTextAnim(bannerSec) {
     }    
 }
 
-function homeBannerAnim() {
+function homeBannerAnim(isDekstop) {
 
     let homeBanner = document.getElementById('home-banner');
     if (homeBanner != undefined) {
