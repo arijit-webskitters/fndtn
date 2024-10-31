@@ -134,20 +134,3 @@ function dropMatter(matterContainer, circleClass) {
     }
 }
 
-
-
-let dropMatterSec = document.querySelectorAll('.brand-drop-box');
-dropMatterSec.forEach(eachSec => {
-    let circleClass = '.brand-circle-img';
-    ScrollTrigger.create({
-        trigger: eachSec,
-        start: "top 65%",
-        // scroller: isDekstop ? page_container : window,
-        onEnter: () => {
-            dropMatter(eachSec, circleClass)
-        }
-    })
-})
-
-// dropMatter(document.getElementById('container'), '.circles')
-
