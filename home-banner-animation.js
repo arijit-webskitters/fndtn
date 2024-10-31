@@ -79,7 +79,7 @@ function homeBannerAnim(isDekstop, loco_scroll, page_container) {
             // gsap.set(bannerLeftCircle, { left: '0vw', })
             homeBannerScrollTl.to([bannerLeftCircle, bannerVideoCircle, bannerRightCircle], { top: '-12vw', left: "50vw", ease: 'none' })
                 .to([bannerLeftCircle, , bannerRightCircle], { opacity: 0, ease: 'none' })
-                .to([bannerVideoCircleIn], { scale: 4, ease: 'none' }, "<")
+                .to([bannerVideoCircleIn], { scale: window.innerWidth>1200?4:5, ease: 'none' }, "<")
 
                 // .eventCallback("onUpdate", (e) => {
                 // })
