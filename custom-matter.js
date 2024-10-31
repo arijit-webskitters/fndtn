@@ -59,8 +59,8 @@ function dropMatter(matterContainer, circleClass) {
                     let circleDiameter = size.w * SVG_CIRCLE_WIDTH;
                     let scaleSize = circleDiameter / e.width;
                     let scale = Math.min(scaleSize, scaleSize);
-                    console.log('cd', circleDiameter);
-                    console.log('e.w', e.width);
+                    // console.log('cd', circleDiameter);
+                    // console.log('e.w', e.width);
 
                     let circle = Bodies.circle(
                         size.w / 2,
