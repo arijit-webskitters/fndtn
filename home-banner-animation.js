@@ -100,7 +100,14 @@ function homeBannerAnim(isDekstop, loco_scroll, page_container) {
 
 
             $('.scroll-to-sec-btn').on('click', function () {
-                loco_scroll.scrollTo(bannerScrollEnd.end);
+                if(window.innerWidth>1200){
+                    loco_scroll.scrollTo(bannerScrollEnd.end);
+                }else{
+                    window.scrollTo({
+                        top: bannerScrollEnd.end,
+                        behavior: 'smooth'
+                    });
+                }
             })
 
 
