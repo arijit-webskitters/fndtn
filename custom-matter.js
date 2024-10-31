@@ -1,4 +1,4 @@
-function dropMatter(matterContainer, circleClass, dropMatterSec) {
+function dropMatter(matterContainer, circleClass) {
     if (matterContainer != undefined) {
         // module aliases
         var Engine = Matter.Engine,
@@ -132,21 +132,5 @@ function dropMatter(matterContainer, circleClass, dropMatterSec) {
         }
         window.addEventListener("resize", () => handleResize(matterContainer));
     }
-    
-    // let dropMatterSec = document.querySelectorAll('.brand-drop-box');
-    dropMatterSec.forEach(eachSec => {
-        let circleClass = '.brand-circle-img';
-        ScrollTrigger.create({
-            trigger: eachSec,
-            start: "top 65%",
-            // scroller: isDekstop ? page_container : window,
-            onEnter: () => {
-                dropMatter(eachSec, circleClass)
-            }
-        })
-    })
-    
-    // dropMatter(document.getElementById('container'), '.circles')
 }
-
 
