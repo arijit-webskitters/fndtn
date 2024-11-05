@@ -116,21 +116,21 @@ function dropMatter(matterContainer, circleClass) {
                 // if (body.isStatic === true && body.label == "wall") return;
             });
         }
-        function handleResize(matterContainer) {
-            size.w = matterContainer.clientWidth;
-            size.h = matterContainer.clientHeight;
-            //resize canvas
-            render.canvas.width = size.w;
-            render.canvas.height = size.h;
-            // reposition ground
-            Body.setPosition(ground, Vector.create(size.w / 2, size.h + size.offset / 2));
-            // reposition left wall
-            Body.setPosition(leftWall, Vector.create(0 - size.offset / 2, size.h / 2));
-            // reposition right wall
-            Body.setPosition(rightWall, Vector.create(size.w + size.offset / 2, size.h / 2));
-            //scale elements
-            scaleBodies();
-        }
-        window.addEventListener("resize", () => handleResize(matterContainer));
+        // function handleResize(matterContainer) {
+        //     size.w = matterContainer.clientWidth;
+        //     size.h = matterContainer.clientHeight;
+        //     //resize canvas
+        //     render.canvas.width = size.w;
+        //     render.canvas.height = size.h;
+        //     // reposition ground
+        //     Body.setPosition(ground, Vector.create(size.w / 2, size.h + size.offset / 2));
+        //     // reposition left wall
+        //     Body.setPosition(leftWall, Vector.create(0 - size.offset / 2, size.h / 2));
+        //     // reposition right wall
+        //     Body.setPosition(rightWall, Vector.create(size.w + size.offset / 2, size.h / 2));
+        //     //scale elements
+        //     scaleBodies();
+        // }
+        // window.addEventListener("resize", () => handleResize(matterContainer));
     }
 }
